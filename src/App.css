@@ -14,9 +14,12 @@
  #main > aside {
    flex: 0 0 20vw;
    background: RGB(250,250,250);
+   border-left-style: solid;
+   border-left-width: 1px;
+   border-color: #bdbdbd;
  }
 
- footer, article, aside {
+ footer, article {
    padding: 1em;
  }
 
@@ -34,4 +37,19 @@
   text-decoration: none;
   color: white;
   text-align: right;
+}
+
+.stepchik {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  background: white;
+  border: 2px solid orange;
+  border-radius: 50px;
+}
+
+.stepper {
+  flex-direction: column;
+  display: flex;
+  padding: 24px;
 }
