@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Stepper from './Stepper';
-import styled from 'styled-components';
 import Button from './Components/Atoms/Button';
+import Stepper2 from './Components/Stepper2'
 
   function getSteps() {
     return ['Set name and durationn', 'Sipping address', 'Select account', 'Confirm your reserv'];
@@ -28,36 +28,13 @@ import Button from './Components/Atoms/Button';
       <div>
         <div id="main">
           <article>
+            <h1>Styled components, lets start</h1>
             <Button disabled={activeStep === 0} onClick={handleBack}>Back</Button>
             <Button primary onClick={handleNext}> {activeStep === steps.length - 1 ? 'Finish' : 'Next'}</Button>
           </article>
           <aside>
-            <div>
-              <div className="stepper">
-              <div>
-              </div>
-                <span className="stepBorderLine"></span>
-              <div>
-              </div>
-                <span className="stepBorderLine"></span>
-              <div>
-                <span className="stepContainer stepActive">
-                  <span className="stepNumber">1</span>
-                  <span className="stepLabel">Set name and duration</span>
-                </span>
-              </div>
-                <span className="stepBorderLine"></span>
-              <div>
-                <span className="stepContainer">
-                  <span className="stepNumber">2</span>
-                  <span className="stepLabel">Sipping address</span>
-                </span>
-              </div>
-            </div>
-            </div>
-
+            <Stepper2></Stepper2>
             <Stepper steps={steps} activeStep={activeStep}></Stepper>
-
           </aside>
         </div>
         <footer className="footer">
