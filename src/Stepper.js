@@ -6,12 +6,16 @@ import StepLabel from '@material-ui/core/StepLabel';
 const VerticalLinearStepper = (props) => {
   return (
     <div>
-      <Stepper className="stepper2" activeStep={props.activeStep} orientation="vertical">
+      <Stepper className="stepper2" 
+              activeStep={props.activeStep}
+              orientation="vertical">
+        
         {props.steps.map(label => (
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
           </Step>
         ))}
+
       </Stepper>
     </div>
   );

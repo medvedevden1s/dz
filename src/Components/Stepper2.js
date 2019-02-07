@@ -9,32 +9,20 @@ const StepperContainer = styled.div`
 
 const StepLabel = styled.span`
     padding-left: 8px;
-    color: rgba(0, 0, 0, 0.54);
+    color: inherit;
     font-family: "Verdana", sans-serif;
     line-height: 25px;
-
-    ${props => props.active && `
-    color: #EE4F2B;
-    font-weight: bold;
-    font-family: "Verdana", sans-serif;
-    `};
 `;
 
-const StepNumber = styled.span`
+const Step = styled.span`
     width: 30px;
     height: 30px;
     text-align: center;
     background: white;
     border: 1px solid #EE4F2B;
     border-radius: 50%;
-    color: rgba(0, 0, 0, 0.54);
+    color: inherit;
     line-height: 25px;
-
-    ${props => props.active && `
-    color: #EE4F2B;
-    font-weight: bold;
-    font-family: "Verdana", sans-serif;
-    `};
 `;
 
 const StepBorderLine = styled.span`
@@ -49,33 +37,34 @@ const StepBorderLine = styled.span`
 const StepContainer = styled.span`
     display: flex;
     align-items: center;
+
+    ${props => props.activeStep && `
+        color: #EE4F2B;
+        font-weight: bold;
+        font-family: "Verdana", sans-serif;
+    `};
 `;
 
-const Stepper = () => {
+const Stepper = (props) => {
+    const {steps, activeStep} = props;
+
     return (
         <div>
             <StepperContainer>
                 <StepBorderLine></StepBorderLine>
-                <StepBorderLine></StepBorderLine>
-                <div>
-                    <StepContainer>
-                        <StepNumber active>1</StepNumber>
-                        <StepLabel active>Set name and duration</StepLabel>
-                    </StepContainer>
-                </div>
-                <StepBorderLine></StepBorderLine>
-                <div>
-                    <StepContainer>
-                        <StepNumber>2</StepNumber>
-                        <StepLabel>Sipping address</StepLabel>
-                    </StepContainer>
-                </div>
+                <StepBorderLine></StepBorderLine>								
+				{steps.map((label, i) => (
+                    <div key={i}>
+                        <StepContainer activeStep={i === activeStep ? 'activeStep': ''}> 
+                            <Step>{i+1}</Step>
+                            <StepLabel >{label}</StepLabel>
+                        </StepContainer>
+                        {steps.length -1 === i ? "" : <StepBorderLine></StepBorderLine>}
+                    </div>
+                ))}
             </StepperContainer>
         </div>
     );
 }
-
-
-
 
 export default Stepper;

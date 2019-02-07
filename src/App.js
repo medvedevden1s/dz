@@ -33,7 +33,7 @@ import Stepper2 from './Components/Stepper2'
             <Button primary onClick={handleNext}> {activeStep === steps.length - 1 ? 'Finish' : 'Next'}</Button>
           </article>
           <aside>
-            <Stepper2></Stepper2>
+            <Stepper2 steps={steps} activeStep={activeStep}></Stepper2>
             <Stepper steps={steps} activeStep={activeStep}></Stepper>
           </aside>
         </div>
