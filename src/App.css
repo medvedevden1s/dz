@@ -39,17 +39,46 @@
   text-align: right;
 }
 
-.stepchik {
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  background: white;
-  border: 2px solid orange;
-  border-radius: 50px;
-}
-
 .stepper {
   flex-direction: column;
   display: flex;
-  padding: 24px;
+  margin-left: 24px;
+}
+
+.stepContainer{
+  display: flex;
+  align-items: center;
+}
+
+.stepNumber {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background: white;
+  border: 1px solid #EE4F2B;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.54);
+  line-height: 25px;
+}
+
+.stepLabel {
+  padding-left: 8px;
+  color: rgba(0, 0, 0, 0.54);
+  font-family: "Verdana", sans-serif;
+}
+
+.stepActive {
+  line-height: 25px;
+  color: #EE4F2B;
+  font-weight: bold;
+  font-family: "Verdana", sans-serif;
+}
+
+.stepBorderLine {
+  margin-left: 14px;
+  min-height: 24px;
+  border-left-style: solid;
+  border-left-width: 1px;
+  display: block;
+  border-color: #bdbdbd;
 }

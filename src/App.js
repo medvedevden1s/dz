@@ -36,12 +36,31 @@ import Button from '@material-ui/core/Button';
             </Button>
           </article>
           <aside>
+            <div>
+              <div className="stepper">
+              <div>
+              </div>
+                <span class="stepBorderLine"></span>
+              <div>
+              </div>
+                <span class="stepBorderLine"></span>
+              <div>
+                <span className="stepContainer stepActive">
+                  <span className="stepNumber">1</span>
+                  <span className="stepLabel">Set name and duration</span>
+                </span>
+              </div>
+                <span class="stepBorderLine"></span>
+              <div>
+                <span className="stepContainer">
+                  <span className="stepNumber">2</span>
+                  <span className="stepLabel">Sipping address</span>
+                </span>
+              </div>
+            </div>
+            </div>
+
             <Stepper steps={steps} activeStep={activeStep}></Stepper>
-            
-            <svg height="100" width="100">
-              <circle cx="35" cy="35" r="12" stroke="orange" strokeWidth="2" fill="white" />
-              <text x="35%" y="35%" text-anchor="middle" stroke="orange" stroke-width="1px" dy=".3em">1</text>
-            </svg>
 
           </aside>
         </div>
