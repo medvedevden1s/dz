@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import Stepper from './Stepper'
-import Button from '@material-ui/core/Button';
+import Stepper from './Stepper';
+import styled from 'styled-components';
+import Button from './Components/Atoms/Button';
 
   function getSteps() {
     return ['Set name and durationn', 'Sipping address', 'Select account', 'Confirm your reserv'];
@@ -28,29 +29,24 @@ import Button from '@material-ui/core/Button';
         <div id="main">
           <article>
             <Button disabled={activeStep === 0} onClick={handleBack}>Back</Button>
-            <Button
-                variant="contained"
-                color="primary"
-                onClick={handleNext}>
-                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-            </Button>
+            <Button primary onClick={handleNext}> {activeStep === steps.length - 1 ? 'Finish' : 'Next'}</Button>
           </article>
           <aside>
             <div>
               <div className="stepper">
               <div>
               </div>
-                <span class="stepBorderLine"></span>
+                <span className="stepBorderLine"></span>
               <div>
               </div>
-                <span class="stepBorderLine"></span>
+                <span className="stepBorderLine"></span>
               <div>
                 <span className="stepContainer stepActive">
                   <span className="stepNumber">1</span>
                   <span className="stepLabel">Set name and duration</span>
                 </span>
               </div>
-                <span class="stepBorderLine"></span>
+                <span className="stepBorderLine"></span>
               <div>
                 <span className="stepContainer">
                   <span className="stepNumber">2</span>
@@ -65,7 +61,7 @@ import Button from '@material-ui/core/Button';
           </aside>
         </div>
         <footer className="footer">
-            <div className="logo"><a href="http://localhost:3000/#">RESERVE</a></div>
+            <div className="logo"><a href="http://localhost:3000/#">RESERV</a></div>
             <div className="exit"><a href="http://localhost:3000/#">Exit X</a></div>
         </footer>
       </div>     

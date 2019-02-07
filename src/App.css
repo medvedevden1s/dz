@@ -39,6 +39,10 @@
   text-align: right;
 }
 
+.logo {
+  font-weight: bold;
+}
+
 .stepper {
   flex-direction: column;
   display: flex;
