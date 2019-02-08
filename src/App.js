@@ -3,6 +3,7 @@ import './App.css';
 import Stepper from './Stepper';
 import Button from './Components/Atoms/Button';
 import Stepper2 from './Components/Stepper2'
+import Content from './Components/Content';
 
   function getSteps() {
     return ['Set name and durationn', 'Sipping address', 'Select account', 'Confirm your reserv'];
@@ -28,7 +29,16 @@ import Stepper2 from './Components/Stepper2'
       <div>
         <div id="main">
           <article>
-            <h1>Styled components, lets start</h1>
+            <h1>Create a RESERV > Set name and duration</h1>
+            <Content></Content>
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <Button disabled={activeStep === 0} onClick={handleBack}>Back</Button>
             <Button primary onClick={handleNext}> {activeStep === steps.length - 1 ? 'Finish' : 'Next'}</Button>
           </article>
