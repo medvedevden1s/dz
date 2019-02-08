@@ -30,21 +30,18 @@ import Content from './Components/Content';
         <div id="main">
           <article>
             <h1>Create a RESERV > Set name and duration</h1>
-            <Content></Content>
-
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <Button disabled={activeStep === 0} onClick={handleBack}>Back</Button>
-            <Button primary onClick={handleNext}> {activeStep === steps.length - 1 ? 'Finish' : 'Next'}</Button>
+            <Content>
+              <div>
+                <Button disabled={activeStep === 0} onClick={handleBack}>Back</Button>
+                <Button primary onClick={handleNext}> 
+                  {activeStep === steps.length - 1 ? 'Finish' : 'Next ->'}
+                </Button>
+              </div>
+            </Content>
           </article>
           <aside>
             <Stepper2 steps={steps} activeStep={activeStep}></Stepper2>
-            <Stepper steps={steps} activeStep={activeStep}></Stepper>
+            {/* <Stepper steps={steps} activeStep={activeStep}></Stepper> */}
           </aside>
         </div>
         <footer className="footer">

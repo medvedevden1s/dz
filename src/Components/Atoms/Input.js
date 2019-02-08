@@ -6,6 +6,7 @@ const StyledInput = styled.input`
     width: 65%;
     padding: 12px 20px;
     margin: 8px 0;
+    margin-left: 40px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -24,10 +25,10 @@ const StyledLabel = styled.label`
 const Input = (props) => {
     const {id, placeholder, labelText} = props
     return(
-        <>
+        <div>
             <StyledLabel htmlFor={id}>{labelText}</StyledLabel>
-            <StyledInput id={id} placeholder={placeholder}></StyledInput>
-        </>
+            <StyledInput id={id} placeholder={placeholder}></StyledInput>      
+        </div>
     );
 }
 
